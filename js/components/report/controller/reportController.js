@@ -347,7 +347,10 @@ define([
       // restore report modal
       $('#reportModal').modal('show');
     },
-
+    printReport: function(){
+      $(".modal-open").children().not(".report-container").hide();
+      window.print();
+    },
     createPdf: function(){
       console.log('create');
       var pdf = new jsPDF('portrait', 'in', 'letter');

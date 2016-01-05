@@ -59,7 +59,22 @@ html {
 //   }
 // }
 
+@media print {
+    // header, .footer, footer {
+    //     display: none;
+    // }
 
+    // hide main content when dialog open
+    // body.modal-open div.container.body-content div#mainContent {
+    //     display: none;
+    // }
+    // body.modal-open div:not(.report-container){
+    //     display: none;
+    // }
+    .noPrint {
+        display: none;
+    }
+}
 /* Hyperlinks */
 a {
   color: $doc-blue;

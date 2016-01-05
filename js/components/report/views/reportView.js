@@ -146,7 +146,10 @@ define([
         $('#clearSolarArrayButton').on('click', lang.hitch(this, function(){
           this.clearSolarArray();
         }));
-
+        $('#printButton').on('click', function(){
+          //reportController.underConstruction();
+          reportController.printReport();
+        });
         $('#pdfButton').on('click', function(){
           //reportController.underConstruction();
           reportController.createPdf();

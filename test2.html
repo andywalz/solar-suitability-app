@@ -4,6 +4,9 @@
 
   <title>MN Solar Suitability Analysis App</title>
 
+  <!-- Include Print CSS -->
+  <link rel="stylesheet" href="assets/css/print.css" type="text/css" media="print" />
+
   <!-- Favicons -->
   <link href="assets/images/favicons/apple-touch-icon-57x57.png" sizes="57x57" rel="apple-touch-icon">
   <link href="assets/images/favicons/apple-touch-icon-60x60.png" sizes="60x60" rel="apple-touch-icon">
@@ -36,47 +39,136 @@
   <link href="assets/css/font-awesome.min.css" rel="stylesheet">
   
   <!-- Required Libraries -->
-  <script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/nls/jsapi_en-us.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/dojox/gfx/svg.js"></script><script type="text/javascript" charset="utf-8" src="/js/app/main.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/tasks/Geoprocessor.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/layers/ArcGISImageServiceLayer.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/layers/ImageServiceParameters.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/layers/RasterFunction.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/toolbars/draw.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/toolbars/edit.js"></script><script type="text/javascript" charset="utf-8" src="/js/components/query/model/queryModel.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/tasks/JobInfo.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/tasks/GPMessage.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/tasks/LinearUnit.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/tasks/DataFile.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/tasks/RasterData.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/tasks/Date.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/tasks/ParameterValue.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/tasks/GPResultImageLayer.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/toolbars/_toolbar.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/toolbars/_Box.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/toolbars/_GraphicMover.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/toolbars/_VertexEditor.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/toolbars/TextEditor.js"></script><script type="text/javascript" charset="utf-8" src="/js/components/report/views/reportView.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/dojox/gfx/Moveable.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/dojox/gfx/Mover.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/dijit/Menu.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/dijit/MenuItem.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/toolbars/_VertexMover.js"></script><script type="text/javascript" charset="utf-8" src="/js/components/calculator/views/calculatorView.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/dijit/DropDownMenu.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/dijit/_Contained.js"></script><script type="text/javascript" charset="utf-8" src="/js/components/report/views/siteDetailsView.js"></script><script type="text/javascript" charset="utf-8" src="/js/components/report/views/solarCalculatorView.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/dijit/_MenuBase.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/dijit/_KeyNavContainer.js"></script><script type="text/javascript" charset="utf-8" src="/js/components/report/model/reportModel.js"></script><script type="text/javascript" charset="utf-8" src="/js/components/geocoder/views/geocoderView.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/dijit/_KeyNavMixin.js"></script><script type="text/javascript" charset="utf-8" src="/js/components/dataIssues/views/dataIssuesView.js"></script><script type="text/javascript" charset="utf-8" src="/js/components/dataIssues/controller/dataIssuesController.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/dijit/Geocoder.js"></script><script type="text/javascript" charset="utf-8" src="/js/components/appIssues/views/appIssuesView.js"></script><script type="text/javascript" charset="utf-8" src="/js/components/email/views/emailView.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/layers/GeoRSSLayer.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/tasks/locator.js"></script><script type="text/javascript" charset="utf-8" src="/js/components/appIssues/controller/appIssuesController.js"></script><script type="text/javascript" charset="utf-8" src="/js/components/email/controller/emailController.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/esri/tasks/AddressCandidate.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/dijit/PopupMenuItem.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/dijit/CheckedMenuItem.js"></script><script type="text/javascript" charset="utf-8" src="http://js.arcgis.com/3.13/dijit/MenuSeparator.js"></script><script src="lib/jquery.min.js"></script>
-  <script src="lib/underscore-min.js"></script>
-  <script src="lib/backbone.js"></script>
-  <script src="lib/bootstrap.min.js"></script>
-  <script src="lib/bootstrap-toggle.min.js"></script>
-  <script src="lib/d3.min.js"></script>
-  <script src="lib/d3-tip.js"></script>
-  <script src="lib/jspdf.min.js"></script>
-  <script src="lib/js.cookie.js"></script>
-  <script src="lib/jquery.printelement.min.js"></script>
-
   <script src="//js.arcgis.com/3.13"></script>
 
 </head>
 <body>
-<div class="row">
-                        <div class="col-md-1">
-                            <img src="assets/images/solar-app-transparent220x235.png" height="65px" alt="MN Solar Logo">
+
+
+
+<div class="container-fluid">
+        <!-- Divide buttons from other details-->
+        <div class="row">
+            
+            <!-- Data -->
+            <div class="col-md-12">
+
+                <!-- Data Columns -->
+                <div class="row">
+                    
+                    <!-- Quick solar results -->
+                    <div class="col-md-4">
+                        <button id="closeResultsTop" aria-label="Close" data-dismiss="modal" class="close closeButton pull-right closeResultsTop" type="button"></button>
+                        <div class="resultHeader">
+                            <span>Results Preview</span>
                         </div>
-                        <div class="col-md-10">
-                            <div class="row">
-                                <div class="col-md-10 noGutter">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <h4 class="modal-title reportSiteTitle" id="myTitle">My Solar Suitability Report</h4>
-                                        </div>
+                        <div class="resultsPreview1 noselect" id="results">
+                            <div>
+                                
+                                <div class="progressBar progress progress-width gradient center">
+
+                                    <div class="progress-bar showGradient" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+                                        <span class="center">85%</span>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="reportLatLng">Latitude: 44.993482 Longitude: -93.288456</div>
+                                
+                                <div id="progress-labels" class="progress-width center bottomSpace progress-labels"><!-- Do not remove these comments (needed to eliminate space between inline block elements)
+                                --><div id="labelPoor">Poor</div><!-- removing space
+                                    --><div id="labelFair">Fair</div><!-- removing space
+                                    --><div id="labelGood">Good</div><!-- removing space
+                                    --><div id="labelOptimal">Optimal</div><!-- removing space
+                            --></div>
+                                <div class="center bottomSpace">
+                                    Percent of Total Available Solar
                                 </div>
                             </div>
 
+                            <div class="topSpace">
+                                <p class="paragraphIndent" id="solarCalcText">
+                                    Your site is <span class="valueHelp">Good</span>. You would need a <span class="valueHelp">5.73 kW</span> solar PV system to generate <span class="valueHelp">50%</span> of your power. This system would cost approximately <span class="valueHelp">$21,501</span>. With <a href="https://mn.gov/commerce/consumers/your-home/save-energy-money/mim.jsp" target="_blank" class="madeInMn">Made in Minnesota</a> and other incentives estimated system payback is <span class="valueHelp">5.6 years</span>.<!-- Display warning ** -->
+                                
+                                </p>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="center">
+                            <button type="button" class="btn btn-default btn-solar reportControls" id="viewReport">
+                                <span id="viewReportLink">Full Report</span>
+                                <i class="fa fa-print"></i>
+                            </button>
+                        
+                            <button type="button" class="btn btn-default btn-solar reportControls" id="emailReport">
+                                <span id="emailReportLink">Share Results</span>
+                                <i class="fa fa-envelope-o"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-default btn-solar reportControls" id="dataIssue">
+                                <span id="dataIssuesLink">Problem?</span>
+                                <i class="fa fa-exclamation-circle"></i>
+                            </button>
+                            </div>
+                        </div>                     
+            
+                    </div> <!-- end col -->
+
+                    <!-- histogram -->
+                    <div class="col-md-4">
+                        <div class="resultHeader">
+                            <div class="chartTitle">Percent Sun Hours By Month</div>
                         </div>
-                        <div class="col-md-1">
-                            <button data-target="#reportModal" aria-label="Close" data-dismiss="modal" class="close closeButton pull-right" style="color:black;" type="button"></button>
-                        </div>
+                        <div class="resultsDisplay noselect" id="sunHrsHisto"><svg class="chart" width="660" height="320"><g transform="translate(50,10)"><g class="x axis" transform="translate( 0,260)"><g class="tick" transform="translate(12.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text dy=".15em" y="9" x="0" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">Jan</text></g><g class="tick" transform="translate(37.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text dy=".15em" y="9" x="0" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">Feb</text></g><g class="tick" transform="translate(62.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text dy=".15em" y="9" x="0" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">Mar</text></g><g class="tick" transform="translate(87.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text dy=".15em" y="9" x="0" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">Apr</text></g><g class="tick" transform="translate(112.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text dy=".15em" y="9" x="0" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">May</text></g><g class="tick" transform="translate(137.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text dy=".15em" y="9" x="0" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">Jun</text></g><g class="tick" transform="translate(162.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text dy=".15em" y="9" x="0" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">Jul</text></g><g class="tick" transform="translate(187.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text dy=".15em" y="9" x="0" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">Aug</text></g><g class="tick" transform="translate(212.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text dy=".15em" y="9" x="0" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">Sep</text></g><g class="tick" transform="translate(237.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text dy=".15em" y="9" x="0" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">Oct</text></g><g class="tick" transform="translate(262.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text dy=".15em" y="9" x="0" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">Nov</text></g><g class="tick" transform="translate(287.5,0)" style="opacity: 1;"><line y2="6" x2="0"></line><text dy=".15em" y="9" x="0" dx="-.8em" transform="rotate(-65)" style="text-anchor: end;">Dec</text></g><path class="domain" d="M0,6V0H300V6"></path></g><g class="y axis"><g class="tick" transform="translate(0,260)" style="opacity: 1;"><line x2="-6" y2="0"></line><text dy=".32em" x="-9" y="0" style="text-anchor: end;">0</text></g><g class="tick" transform="translate(0,234)" style="opacity: 1;"><line x2="-6" y2="0"></line><text dy=".32em" x="-9" y="0" style="text-anchor: end;">50</text></g><g class="tick" transform="translate(0,208)" style="opacity: 1;"><line x2="-6" y2="0"></line><text dy=".32em" x="-9" y="0" style="text-anchor: end;">100</text></g><g class="tick" transform="translate(0,182)" style="opacity: 1;"><line x2="-6" y2="0"></line><text dy=".32em" x="-9" y="0" style="text-anchor: end;">150</text></g><g class="tick" transform="translate(0,156)" style="opacity: 1;"><line x2="-6" y2="0"></line><text dy=".32em" x="-9" y="0" style="text-anchor: end;">200</text></g><g class="tick" transform="translate(0,130)" style="opacity: 1;"><line x2="-6" y2="0"></line><text dy=".32em" x="-9" y="0" style="text-anchor: end;">250</text></g><g class="tick" transform="translate(0,104)" style="opacity: 1;"><line x2="-6" y2="0"></line><text dy=".32em" x="-9" y="0" style="text-anchor: end;">300</text></g><g class="tick" transform="translate(0,78.00000000000001)" style="opacity: 1;"><line x2="-6" y2="0"></line><text dy=".32em" x="-9" y="0" style="text-anchor: end;">350</text></g><g class="tick" transform="translate(0,51.999999999999986)" style="opacity: 1;"><line x2="-6" y2="0"></line><text dy=".32em" x="-9" y="0" style="text-anchor: end;">400</text></g><g class="tick" transform="translate(0,25.999999999999993)" style="opacity: 1;"><line x2="-6" y2="0"></line><text dy=".32em" x="-9" y="0" style="text-anchor: end;">450</text></g><g class="tick" transform="translate(0,0)" style="opacity: 1;"><line x2="-6" y2="0"></line><text dy=".32em" x="-9" y="0" style="text-anchor: end;">500</text></g><path class="domain" d="M-6,0H0V260H-6"></path><text x="320" y="10" text-anchor="center" style="font-size: 16px;"></text></g><rect class="backgroundBar" x="2.5" y="113.48479999999999" width="20" height="146.5152"></rect><rect class="backgroundBar" x="27.5" y="115.61159999999998" width="20" height="144.38840000000002"></rect><rect class="backgroundBar" x="52.5" y="78.18200000000002" width="20" height="181.81799999999998"></rect><rect class="backgroundBar" x="77.5" y="58.52600000000002" width="20" height="201.474"></rect><rect class="backgroundBar" x="102.5" y="26.92039999999999" width="20" height="233.0796"></rect><rect class="backgroundBar" x="127.5" y="16.71799999999998" width="20" height="243.282"></rect><rect class="backgroundBar" x="152.5" y="4.836000000000016" width="20" height="255.164"></rect><rect class="backgroundBar" x="177.5" y="18.054400000000015" width="20" height="241.94559999999998"></rect><rect class="backgroundBar" x="202.5" y="48.853999999999985" width="20" height="211.14600000000002"></rect><rect class="backgroundBar" x="227.5" y="67.38159999999999" width="20" height="192.6184"></rect><rect class="backgroundBar" x="252.5" y="98.306" width="20" height="161.69400000000002"></rect><rect class="backgroundBar" x="277.5" y="110.42200000000003" width="20" height="149.57799999999997"></rect><rect class="bar" x="2.5" y="121.51933333332002" width="20" height="138.48066666667998"></rect><rect class="bar" x="27.5" y="124.15610200344001" width="20" height="135.84389799655997"></rect><rect class="bar" x="52.5" y="91.32330810044" width="20" height="168.67669189956"></rect><rect class="bar" x="77.5" y="80.63526318484001" width="20" height="179.36473681515997"></rect><rect class="bar" x="102.5" y="66.89158227856" width="20" height="193.10841772144"></rect><rect class="bar" x="127.5" y="64.85661764712" width="20" height="195.14338235288"></rect><rect class="bar" x="152.5" y="64.01953663768" width="20" height="195.98046336232"></rect><rect class="bar" x="177.5" y="72.19563942032" width="20" height="187.80436057968"></rect><rect class="bar" x="202.5" y="84.74447323576003" width="20" height="175.25552676423996"></rect><rect class="bar" x="227.5" y="110.70495089991998" width="20" height="149.29504910008"></rect><rect class="bar" x="252.5" y="122.95220689648002" width="20" height="137.04779310351998"></rect><rect class="bar" x="277.5" y="127.1741176472" width="20" height="132.8258823528"></rect></g></svg></div>
+
                     </div>
+
+                    <!-- getting started col -->
+                    <div class="col-md-4">
+                        <button id="closeResultsRight" aria-label="Close" data-dismiss="modal" class="close closeButton pull-right closeResultsRight" type="button"></button>
+
+                        <div class="resultHeader bottomSpace">
+                            <span>Next Steps</span>
+                        </div>
+                        <div class="paragraphIndent topSpace">
+                        <ol class="getstarted">
+                            <li><a href="https://mn.gov/commerce/consumers/your-home/energy-info/solar/#3" target="_blank">Learn More About Solar</a></li>
+                            
+                                <li>
+                                    
+                                            <a href="http://www.cleanenergyprojectbuilder.org/directory?title=&amp;field_category_tid=208&amp;field_geofield_distance%5Borigin%5D=55401" target="_blank">Contact a Local Installer</a>
+                                        
+                                    
+                                </li>
+                            
+
+                            <li>
+                                <a href="http://programs.dsireusa.org/system/program?state=MN&amp;technology=7&amp;" target="_blank">MN Incentives/Policies for Solar</a>
+                            </li>
+
+                            <li>
+                                <a href="" id="nearbySolarLink">Map nearby solar installations</a>
+                            </li>
+                            <li>Contact your utility service provider: <br>
+                                
+                                   <a href="http://www.xcelenergy.com" target="_blank">Xcel Energy</a>
+                                    <!-- <a href="tel:+1-' + 612 + '-' + 330-5500">(612) 330-5500</a> -->
+                                
+                            </li>
+                            </ol>
+                            
+                            <!-- Display bare earth warning msg -->
+                            
+                                <div class="small topSpace">
+                                    Source Data: <a href="http://www.mngeo.state.mn.us/chouse/elevation/lidar.html" target="_blank">MN Lidar (Spring and Fall 2011)</a>
+                                </div>
+                            
+                           
+                        </div>
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </div> <!-- ROW END -->
+    </div> <!-- CONTAINER END --> 
 
 </body>
 </html>

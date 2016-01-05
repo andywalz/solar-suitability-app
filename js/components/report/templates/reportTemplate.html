@@ -29,7 +29,7 @@
                             </div>
 
                         </div>
-                        <div class="col-md-1">
+                        <div class="col-md-1 noPrint">
                             <button data-target="#reportModal" aria-label="Close" data-dismiss="modal" class="close closeButton pull-right" style="color:black;" type="button"></button>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <!--<button type="button" class="btn btn-link editSiteDetails pull-right" data-dismiss="modal" data-toggle="modal" data-target=".editSiteDetailsModal" aria-label="Edit">-->
-                            <button type="button" class="btn btn-link editSiteDetails pull-right"  aria-label="Edit">
+                            <button type="button" class="btn btn-link editSiteDetails pull-right noPrint"  aria-label="Edit">
                                 <span aria-hidden="true">
                                     Customize Report <i class="fa fa-pencil"></i>
                                 </span>
@@ -219,6 +219,7 @@
 
         <div class="modal-footer reportFooter">
             <!-- <button type="button" class="btn btn-default downloadButton">Download PDF</button> -->
+            <button type="button" id="printButton" class="btn btn-primary printButton">Print</button>
             <button type="button" id="pdfButton" class="btn btn-primary printButton">PDF</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
